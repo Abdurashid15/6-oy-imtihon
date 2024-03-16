@@ -24,7 +24,7 @@ const App = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get('http://localhost:3030/posts');
+      const response = await axios.get('http://localhost:3000/posts');
       setPosts(response.data);
     } catch (error) {
       console.error('Ошибка при получении постов из JSON Server:', error);
@@ -34,7 +34,7 @@ const App = () => {
   const addPost = async () => {
     if (inputValue.trim() !== '') {
       try {
-        await axios.post('http://localhost:3030/posts', {
+        await axios.post('http://localhost:3000/posts', {
           title: inputValue
         });
         setInputValue('');
@@ -47,7 +47,7 @@ const App = () => {
 
   const updatePost = async (id) => {
     try {
-      await axios.put(`http://localhost:3030/posts/${id}`, {
+      await axios.put(`http://localhost:3000/posts/${id}`, {
         title: editingPostTitle
       });
       setEditingPostId(null);
@@ -60,7 +60,7 @@ const App = () => {
 
   const deletePost = async (id) => {
     try {
-      await axios.delete(`http://localhost:3030/posts/${id}`);
+      await axios.delete(`http://localhost:3000/posts/${id}`);
       fetchPosts();
     } catch (error) {
       console.error('Ошибка при удалении поста:', error);
@@ -89,11 +89,21 @@ const App = () => {
               </>
             ) : (
               <>
-                {post.title}
-                <div className='div'>
-                  <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border-2px ' onClick={() => setEditingPostId(post.id)}>Update</button>
-                  <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => deletePost(post.id)}>Delete</button>
+                <div className="container">
+                  <div className="info">
+                    <ul>
+                      <li>
+                        <h3>ID: {post.id}</h3>
+                        <h4>Title: {post.title}</h4>
+                      </li>
+                    </ul>
+                    <div className='div'>
+                      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border-2px ' onClick={() => setEditingPostId(post.id)}>Update</button>
+                      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => deletePost(post.id)}>Delete</button>
+                    </div>
+                  </div>
                 </div>
+
               </>
             )}
           </li>
