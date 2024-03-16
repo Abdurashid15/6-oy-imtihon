@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "title": "dwefefewfwefweewfewfewf",
+      "id": "160a"
+    },
+    {
+      "title": "dfgdfgbdfbdfbdfbfdb",
+      "id": "a7e9"
+    },
+    {
+      "title": "uykl.;uopiluilkjh",
+      "id": "40f2"
+    },
+    {
+      "id": "7146",
+      "title": "erferferfreferfrferfrefre"
+    },
+    {
+      "id": "fddb",
+      "title": "refererfrerefrererfref"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
