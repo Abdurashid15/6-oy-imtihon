@@ -69,12 +69,15 @@ const App = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={addPost}>Add</button>
+      <h1>CRUD</h1>
+      <div className="addinput">
+        <input className='addin'
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button className='Add bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={addPost}>Add</button>
+      </div>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -98,8 +101,8 @@ const App = () => {
                       </li>
                     </ul>
                     <div className='div'>
-                      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border-2px ' onClick={() => setEditingPostId(post.id)}>Update</button>
-                      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => deletePost(post.id)}>Delete</button>
+                      <button className='Update bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border-2px ' onClick={() => setEditingPostId(post.id)}>Update</button>
+                      <button className='Delete bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => deletePost(post.id)}>Delete</button>
                     </div>
                   </div>
                 </div>

@@ -4,7 +4,47 @@
   height: 620px;
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(-135deg, #c850c0, #4158d0)
+}
+
+html {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  font-weight: 700;
+}
+
+body {
+  height: 100%;
+}
+
+.Update {
+  background-color: yellowgreen;
+}
+
+.Update:hover {
+  background-color: rgb(203, 203, 136);
+}
+
+input {
+  border: none;
+  background-color: white;
+  width: 180px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.Delete {
+  background-color: rgb(145, 5, 5);
+}
+
+.Delete:hover {
+  background-color: red;
+}
+
+.Add {
+  background-color: green;
+}
+
+.Add:hover {
+  background-color: rgb(109, 205, 111);
 }
 
 .logo {
@@ -50,6 +90,15 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 5px;
+}
+
+ul {
+  max-width: 420px;
+}
+
+h4 {
+  display: flex;
 }
 
 .div {
@@ -62,6 +111,23 @@ li {
   justify-content: space-between;
 }
 
+h3 {
+  font-weight: 800;
+  text-align: left;
+  font-size: 20px;
+}
+
 .container {
   margin: 10px 0px;
+}
+
+.addinput {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.addin {
+  width: 100%;
 }
